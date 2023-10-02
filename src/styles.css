@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap');
+
+:root {
+	--font: 'DM Sans', sans-serif;
+	--pure-black: #000000;
+	--pure-white: #ffffff;
+	--light-grey: #dfdfdf;
+	--max-mobile-width: 375px;
+	--max-tablet-width: 768px;
+	--min-desktop-width: 768px;
+}
+
+body {
+	font-family: var(--font);
+	color: var(--pure-black);
+	max-width: var(--max-mobile-width);
+	margin: 0 auto;
+}
+
+nav {
+	background-color: var(--pure-white);
+	color: var(--pure-black);
+	min-height: 72px;
+	display: inline-block;
+	& ul {
+		display: flex;
+		list-style: none;
+		gap: 8px;
+	}
+}
+
+.card-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	& .card {
+		background-color: var(--pure-white);
+		padding-inline: 33px 24px;
+		overflow-x: hidden;
+		& h2 {
+			text-transform: uppercase;
+		}
+		& p {
+			opacity: 0.6;
+		}
+		& img {
+			translate: -33px;
+			width: 118%;
+			max-height: 285px;
+			object-fit: cover;
+			object-position: 20% 50%;
+		}
+	}
+	& .card.createbg {
+		background-color: var(--pure-black);
+		color: var(--pure-white);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.mobile-hidden {
+		display: none;
+	}
+	.card-wrapper .card img {
+		width: 100vw;
+	}
+}
