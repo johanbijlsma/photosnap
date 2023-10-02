@@ -32,13 +32,17 @@ nav {
 .card-wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+
 	& .card {
 		background-color: var(--pure-white);
 		padding-inline: 33px 24px;
+		padding-block-end: 92px;
 		overflow-x: hidden;
 		& h2 {
 			text-transform: uppercase;
+			margin-block: 0px;
+			padding-block-start: 72px;
+			padding-block-end: 8px;
 		}
 		& p {
 			opacity: 0.6;
@@ -57,11 +61,62 @@ nav {
 	}
 }
 
+.photo-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	& .photo-card {
+		background-color: var(--pure-white);
+		padding-inline: 33px 24px;
+		padding-block-end: 92px;
+		overflow: hidden;
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.27%, rgba(0, 0, 0, 0.66) 100%);
+		& h2 {
+			text-transform: uppercase;
+			margin-block: 0px;
+		}
+
+		& img {
+			translate: -33px;
+			width: 118%;
+			max-height: 285px;
+			object-fit: cover;
+			object-position: 20% 50%;
+			aspect-ratio: 1/1;
+			mix-blend-mode: multiply;
+			margin-bottom: -210px;
+		}
+		& .photo-card--inner {
+			translate: 0 57px;
+			position: relative;
+			color: var(--pure-white);
+		}
+		& p.photo-title {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 25px;
+		}
+		& p.photo-author {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: normal;
+			translate: 0 -16px;
+		}
+	}
+	& .card.createbg {
+		background-color: var(--pure-black);
+		color: var(--pure-white);
+	}
+}
+
 @media screen and (max-width: 400px) {
 	.mobile-hidden {
 		display: none;
 	}
 	.card-wrapper .card img {
+		width: 100vw;
+	}
+	.photo-wrapper .photo-card img {
 		width: 100vw;
 	}
 }

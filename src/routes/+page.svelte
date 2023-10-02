@@ -9,6 +9,14 @@
 	import designedS from '$lib/assets/home/designed-for-everyone-S.jpg';
 	import designedM from '$lib/assets/home/designed-for-everyone-M.jpg';
 	import designedL from '$lib/assets/home/designed-for-everyone-L.jpg';
+	import mountainsS from '$lib/assets/stories/mountains-S.jpg';
+	import mountainsL from '$lib/assets/stories/mountains-L.jpg';
+	import cityscapesS from '$lib/assets/stories/cityscapes-S.jpg';
+	import cityscapesL from '$lib/assets/stories/cityscapes-L.jpg';
+	import eighteenS from '$lib/assets/stories/18-days-voyage-S.jpg';
+	import eighteenL from '$lib/assets/stories/18-days-voyage-L.jpg';
+	import architecturalsS from '$lib/assets/stories/architecturals-S.jpg';
+	import architecturalsL from '$lib/assets/stories/architecturals-L.jpg';
 </script>
 
 <nav>
@@ -98,28 +106,60 @@
 	</div>
 	<div class="photo-wrapper">
 		<div class="photo-card">
-			<p class="photo-title" />
-			The Mountains by John Appleseed Read Story
-			<p class="photo-author">TEST</p>
-			<a href="/stories" class="photo-link">Read Story</a>
+			<img
+				src={mountainsS}
+				alt=""
+				width="100%"
+				loading="lazy"
+				srcset="{mountainsS} 400w, {mountainsL} 900w"
+			/>
+			<div class="photo-card--inner">
+				<p class="photo-title">The Mountains</p>
+				<p class="photo-author">by John Appleseed</p>
+				<a href="/stories" class="photo-link">Read Story</a>
+			</div>
 		</div>
 		<div class="photo-card">
-			<p class="photo-title" />
-			Sunset Cityscapes by Benjamin Cruz Read Story
-			<p class="photo-author">TEST</p>
-			<a href="/stories" class="photo-link">Read Story</a>
+			<img
+				src={cityscapesS}
+				alt=""
+				width="100%"
+				loading="lazy"
+				srcset="{cityscapesS} 400w, {cityscapesL} 900w"
+			/>
+			<div class="photo-card--inner">
+				<p class="photo-title">Sunset Cityscapes</p>
+				<p class="photo-author">by Benjamin Cruz</p>
+				<a href="/stories" class="photo-link">Read Story</a>
+			</div>
 		</div>
 		<div class="photo-card">
-			<p class="photo-title" />
-			18 Days Voyage by Alexei Borodin Read Story
-			<p class="photo-author">TEST</p>
-			<a href="/stories" class="photo-link">Read Story</a>
+			<img
+				src={eighteenS}
+				alt=""
+				width="100%"
+				loading="lazy"
+				srcset="{eighteenS} 400w, {eighteenL} 900w"
+			/>
+			<div class="photo-card--inner">
+				<p class="photo-title">18 Days Voyage</p>
+				<p class="photo-author">by Alexei Borodin</p>
+				<a href="/stories" class="photo-link">Read Story</a>
+			</div>
 		</div>
 		<div class="photo-card">
-			<p class="photo-title" />
-			Architecturals by Samantha Brooke Read Story
-			<p class="photo-author">TEST</p>
-			<a href="/stories" class="photo-link">Read Story</a>
+			<img
+				src={architecturalsS}
+				alt=""
+				width="100%"
+				loading="lazy"
+				srcset="{architecturalsL} 400w, {architecturalsL} 900w"
+			/>
+			<div class="photo-card--inner">
+				<p class="photo-title">Architecturals</p>
+				<p class="photo-author">by Samantha Brooke</p>
+				<a href="/stories" class="photo-link">Read Story</a>
+			</div>
 		</div>
 	</div>
 
