@@ -52,12 +52,12 @@
 		<li><a href="/stories">Home - Stories</a></li>
 		<li><a href="/features">Features</a></li>
 		<li><a href="/pricing">Pricing</a></li>
-		<li><a href="/">Get an invite</a></li>
+		<li class="mobile-hidden"><a href="/">Get an invite</a></li>
 	</ul>
 </nav>
 <div class="wrapper">
 	<div class="card-wrapper">
-		<div class="card createbg">
+		<div class="card createbg picture-right">
 			<img
 				src={createS}
 				alt=""
@@ -65,14 +65,17 @@
 				loading="lazy"
 				srcset="{createS} 400w, {createM} 800w, {createL} 1200w"
 			/>
+			<!-- <div class="card--inner"> -->
 			<h2 class="card-title">Create and share your photo Stories.</h2>
 
 			<p>
 				Photosnap is a platform for photographers and visual storytellers. We make it easy to share
 				photos, tell stories and connect with others.
 			</p>
+			<a href="/">Get an invite</a>
+			<!-- </div> -->
 		</div>
-		<div class="card">
+		<div class="card picture-left">
 			<img
 				src={beautifulS}
 				alt=""
@@ -80,15 +83,17 @@
 				loading="lazy"
 				srcset="{beautifulS} 400w, {beautifulM} 800w, {beautifulL} 1200w"
 			/>
+			<!-- <div class="card--inner"> -->
 			<h2 class="card-title">Beautiful stories every time</h2>
 			<p>
 				We provide design templates to ensure your stories look terrific. Easily add photos, text,
 				embed maps and media from other networks. Then share your story with everyone.
 			</p>
 			<a href="/stories"> View the stories</a>
+			<!-- </div> -->
 		</div>
 
-		<div class="card">
+		<div class="card picture-right">
 			<img
 				src={designedS}
 				alt=""
@@ -96,12 +101,14 @@
 				loading="lazy"
 				srcset="{designedS} 400w, {designedM} 800w, {designedL} 1200w"
 			/>
+			<!-- <div class="card--inner"> -->
 			<h2 class="card-title">Designed for everyone</h2>
 			<p>
 				Photosnap can help you create stories that resonate with your audience. Our tool is designed
 				for photographers of all levels, brands, businesses you name it.
 			</p>
 			<a href="/stories"> View the stories</a>
+			<!-- </div> -->
 		</div>
 	</div>
 	<div class="photo-wrapper">
