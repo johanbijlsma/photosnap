@@ -92,7 +92,7 @@
 			<!-- </div> -->
 		</div>
 	</div>
-	<div class="photo-wrapper">
+	<div class="photo-wrapper stories">
 		<div class="photo-card">
 			<img
 				src={mountainsS}

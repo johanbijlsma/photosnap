@@ -9,7 +9,7 @@
 	--accent: linear-gradient(28deg, #ffc593 1%, #bc7198 51%, #5a77ff 100%);
 	--max-mobile-width: 375px;
 	--max-tablet-width: 768px;
-	--min-desktop-width: 768px;
+	--min-desktop-width: 1110px;
 	--max-desktop-width: 1440px;
 }
 
@@ -84,11 +84,16 @@ nav {
 		& h2 {
 			text-transform: uppercase;
 			margin-block: 0px;
-			padding-block-start: 72px;
+			padding-block-start: 42px;
 			padding-block-end: 8px;
 		}
 		& p {
 			opacity: 0.6;
+		}
+		& p.card-extra-context {
+			text-transform: uppercase;
+			translate: 0 46px;
+			opacity: 1;
 		}
 		& img {
 			translate: -33px;
@@ -203,13 +208,22 @@ nav {
 		display: flex;
 		flex-direction: column;
 		padding-inline-start: 0px;
+		flex-wrap: wrap;
+		margin: 10px auto;
 	}
 	& li.about-card {
 		margin-block: 16px;
 		padding: 16px;
+		display: grid;
+		grid-template-areas:
+			'image'
+			'header'
+			'content';
+		grid-template-rows: 80px 1fr auto;
+
 		& img {
-			margin-block: 32px;
-			min-height: 72px;
+			margin: auto auto;
+			grid-area: image;
 		}
 		& h3 {
 			font-size: 18px;
@@ -218,6 +232,7 @@ nav {
 			line-height: 25px; /* 138.889% */
 			margin-block-end: 16px;
 			padding-inline: 16px;
+			grid-area: header;
 		}
 		& p {
 			font-size: 15px;
@@ -226,7 +241,35 @@ nav {
 			line-height: 25px; /* 166.667% */
 			opacity: 0.6;
 			padding-inline: 16px;
+			grid-area: content;
 		}
+	}
+}
+.banner {
+	background-image: url('./lib/assets/shared/bg-beta-S.jpg');
+	background-size: cover;
+	min-height: 280px;
+	display: grid;
+	grid-template-areas:
+		'header'
+		'link';
+	grid-template-rows: 1fr 1fr;
+	& h3 {
+		padding-inline: 33px;
+		padding-block: 64px;
+		color: var(--pure-white);
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px; /* 125% */
+		letter-spacing: 3.333px;
+		text-transform: uppercase;
+		grid-area: header;
+	}
+	& a.button-arrow {
+		padding-inline: 33px;
+		padding-block: 64px;
+		grid-area: link;
 	}
 }
 footer {
@@ -313,19 +356,24 @@ a {
 		display: flex;
 		flex-direction: column;
 	}
+	.card-wrapper .card.createbg {
+		&::before {
+			content: '';
+			width: 128px;
+			height: 6px;
+			display: block;
+			background-image: var(--accent);
+			border-radius: 0 0 10px 10px;
+			translate: 0 -72px;
+			position: absolute;
+			top: 436px;
+			z-index: 10;
+		}
+	}
 	.card-wrapper .card img {
 		width: 100vw;
 		object-fit: cover;
 		object-position: 20% 50%;
-	}
-	.createbg h2::before {
-		content: '';
-		width: 128px;
-		height: 6px;
-		display: block;
-		background-image: var(--accent);
-		border-radius: 0 0 10px 10px;
-		translate: 0 -72px;
 	}
 	.photo-wrapper .photo-card img {
 		width: 100vw;
@@ -446,6 +494,32 @@ a {
 		padding-inline: 0px 0px;
 		object-fit: cover;
 	}
+	.banner {
+		background-image: url('./lib/assets/shared/bg-beta-M.jpg');
+		background-size: cover;
+		min-height: 280px;
+		display: grid;
+		grid-template-areas: 'header header . link';
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		& h3 {
+			padding-inline: 33px;
+			padding-block: 64px;
+			color: var(--pure-white);
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 40px; /* 125% */
+			letter-spacing: 3.333px;
+			text-transform: uppercase;
+			grid-area: header;
+		}
+		& a.button-arrow {
+			grid-area: link;
+			padding-inline: 33px;
+			padding-block: 64px;
+		}
+	}
 	footer {
 		& .footer--inner {
 			display: grid;
@@ -502,6 +576,17 @@ a {
 			'cta cta picture'
 			'. . picture';
 		grid-template-columns: 1fr 1fr 273px;
+		grid-template-rows: 173px auto auto auto 173px;
+	}
+	.card-wrapper .card.picture-right.picture-wide {
+		display: grid;
+		grid-template-areas:
+			'. . picture picture picture'
+			'header header picture picture picture'
+			'content content picture picture picture'
+			'cta cta picture picture picture'
+			'. . picture picture picture';
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: 173px auto auto auto 173px;
 	}
 	.card-wrapper .card.picture-left {
@@ -597,6 +682,12 @@ a {
 			}
 		}
 	}
+	.about ul {
+		max-width: var(--min-desktop-width);
+		& li {
+			max-width: calc(var(--min-desktop-width) / 4);
+		}
+	}
 	body {
 		max-width: var(--max-desktop-width);
 	}
@@ -606,6 +697,7 @@ a {
 			list-style: none;
 			display: flex;
 			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 }

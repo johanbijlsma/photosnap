@@ -17,9 +17,9 @@
 	import eighteenL from '$lib/assets/stories/18-days-voyage-L.jpg';
 	import architecturalsS from '$lib/assets/stories/architecturals-S.jpg';
 	import architecturalsL from '$lib/assets/stories/architecturals-L.jpg';
-	import responsive from '$lib/assets/features/desktop/responsive.svg';
-	import noLimit from '$lib/assets/features/desktop/no-limit.svg';
-	import embed from '$lib/assets/features/desktop/embed.svg';
+	import responsive from '$lib/assets/features/responsive.svg';
+	import noLimit from '$lib/assets/features/no-limit.svg';
+	import embed from '$lib/assets/features/embed.svg';
 	import logo from '$lib/assets/shared/desktop/logo.svg';
 	import logoDarkBg from '$lib/assets/shared/desktop/logo-darkbg.svg';
 	import facebook from '$lib/assets/shared/desktop/facebook-darkbg.svg';
