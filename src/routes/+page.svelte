@@ -195,14 +195,14 @@
 				<li><a href="/"><img src={pinterest} alt="Pinterest" /></a></li>
 				<li><a href="/"><img src={instagram} alt="Instagram" /></a></li>
 			</ul>
-			<ul>
+			<ul class="footer-links">
 				<li><a href="/">Home</a></li>
 				<li><a href="/stories">Stories</a></li>
 				<li><a href="/features">Features</a></li>
 				<li><a href="/pricing">Pricing</a></li>
 			</ul>
 			<a href="/" class="dark button-arrow">Get an invite</a>
-			<p>Copyright 2023. All Rights Reserved</p>
+			<p class="footer-copyright">Copyright 2023. All Rights Reserved</p>
 		</div>
 	</footer>
 </div>
