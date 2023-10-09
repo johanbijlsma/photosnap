@@ -6,9 +6,10 @@
 	import twitter from '$lib/assets/shared/desktop/twitter-darkbg.svg';
 	import youtube from '$lib/assets/shared/desktop/youtube-darkbg.svg';
 	import pinterest from '$lib/assets/shared/desktop/pinterest-darkbg.svg';
-	import fullMoonS from '$lib/assets/stories/moon-of-appalacia-S.jpg';
-	import fullMoonM from '$lib/assets/stories/moon-of-appalacia-M.jpg';
-	import fullMoonL from '$lib/assets/stories/moon-of-appalacia-L.jpg';
+	import heroS from '$lib/assets/pricing/hero-S.jpg';
+	import heroM from '$lib/assets/pricing/hero-M.jpg';
+	import heroL from '$lib/assets/pricing/hero-L.jpg';
+	import check from '$lib/assets/pricing/check.svg';
 </script>
 
 <nav>
@@ -25,18 +26,297 @@
 	</ul>
 </nav>
 <div class="wrapper">
-	Stories Features Pricing Get an invite Pricing Create a your stories, Photosnap is a platform for
-	photographers and visual storytellers. It’s the simple way to create and share your photos.
-	Monthly Yearly Basic Includes basic usage of our platform. Recommended for new and aspiring
-	photographers. $19.00 per month $190.00 per year Pick Plan Pro More advanced features available.
-	Recommended for photography veterans and professionals. $39.00 per month $390.00 per year Pick
-	Plan Business Additional features available such as more detailed metrics. Recommended for
-	business owners. $99.00 per month $990.00 per year Pick Plan Compare The Features Basic Pro
-	Business Unlimited Story Posting Unlimited Photo Upload Embedding Custom Content Customize
-	Metadata Advanced Metrics Photo Downloads Search Engine Indexing Custom Analytics We're in Beta.
-	Get your invite today! Get an invite Home Stories Features Pricing Get an invite Copyright 2019.
-	All Rights Reserved
+	<div class="card-wrapper">
+		<div class="card createbg picture-right picture-wide">
+			<img
+				src={heroS}
+				alt=""
+				width="100%"
+				loading="lazy"
+				srcset="{heroS} 400w, {heroM} 760w, {heroL} 900w"
+			/>
+			<h2 class="card-title">Features.</h2>
 
+			<p>
+				We make sure all of our features are designed to be loved by every aspiring and even
+				professional photograpers who wanted to share their stories.
+			</p>
+		</div>
+	</div>
+	<div class="select-plan">
+		<div class="select-plan--inner">
+			<div class="timeperiod-toggle">Montly / Yearly</div>
+			<div class="select-card-wrapper">
+				<div class="select-card basic">
+					<h3>Basic</h3>
+					<p>
+						Includes basic usage of our platform. Recommended for new and aspiring photographers.
+					</p>
+					$19.00 per month $190.00 per year
+					<button>Pick Plan</button>
+				</div>
+				<div class="select-card pro">
+					<h3>Pro</h3>
+					<p>
+						More advanced features available. Recommended for photography veterans and
+						professionals.
+					</p>
+					$39.00 per month $390.00 per year
+					<button>Pick Plan</button>
+				</div>
+				<div class="select-card business">
+					<h3>Business</h3>
+					<p>
+						Additional features available such as more detailed metrics. Recommended for business
+						owners.
+					</p>
+					$99.00 per month $990.00 per year
+					<button>Pick Plan</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="comparisson-block tablet-hidden desktop-hidden">
+		<h2>The features</h2>
+		<ul>
+			<li>Unlimited Story Posting</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Unlimited Photo Upload</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Embedding Custom Content</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Customize Metadata</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Advanced Metrics</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Photo Downloads</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Search Engine Indexing</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+			<li>Custom Analytics</li>
+			<ul>
+				<li>
+					<div class="feature-plan">
+						<span>Basic</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Pro</span>
+						&nbsp;
+					</div>
+				</li>
+				<li>
+					<div class="feature-plan">
+						<span>Business</span>
+						<img src={check} alt="feature included in plan" loading="lazy" />
+					</div>
+				</li>
+			</ul>
+		</ul>
+	</div>
+	<div class="comparisson-table mobile-hidden">
+		<h2>Compare</h2>
+		<br />
+		<table>
+			<thead>
+				<tr>
+					<th>The features</th>
+					<th>Basic</th>
+					<th>Pro</th>
+					<th>Business</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Unlimited Story Posting</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td>Unlimited Photo Upload</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td>Embedding Custom Content</td>
+					<td>&nbsp;</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td>Customize Metadata</td>
+					<td>&nbsp;</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td>Advanced Metrics</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td>Photo Downloads</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td>Search Engine Indexing</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+				<tr>
+					<td> Custom Analytics </td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="banner">
+		<h3>We're in Beta.<br /> Get your invite today!</h3>
+		<a href="/" class="dark button-arrow">Get an invite</a>
+	</div>
 	<footer>
 		<div class="footer--inner">
 			<img src={logoDarkBg} alt="Photosnap" loading="lazy" class="logo" />
