@@ -9,15 +9,6 @@
 	import fullMoonS from '$lib/assets/stories/moon-of-appalacia-S.jpg';
 	import fullMoonM from '$lib/assets/stories/moon-of-appalacia-M.jpg';
 	import fullMoonL from '$lib/assets/stories/moon-of-appalacia-L.jpg';
-	import createS from '$lib/assets/home/create-and-share-S.jpg';
-	import createM from '$lib/assets/home/create-and-share-M.jpg';
-	import createL from '$lib/assets/home/create-and-share-L.jpg';
-	import beautifulS from '$lib/assets/home/beautiful-stories-S.jpg';
-	import beautifulM from '$lib/assets/home/beautiful-stories-M.jpg';
-	import beautifulL from '$lib/assets/home/beautiful-stories-L.jpg';
-	import designedS from '$lib/assets/home/designed-for-everyone-S.jpg';
-	import designedM from '$lib/assets/home/designed-for-everyone-M.jpg';
-	import designedL from '$lib/assets/home/designed-for-everyone-L.jpg';
 	import mountainsS from '$lib/assets/stories/mountains-S.jpg';
 	import mountainsL from '$lib/assets/stories/mountains-L.jpg';
 	import cityscapesS from '$lib/assets/stories/cityscapes-S.jpg';
@@ -50,9 +41,6 @@
 	import tripNowhereL from '$lib/assets/stories/trip-to-nowhere-L.jpg';
 	import kingAfricaS from '$lib/assets/stories/king-on-africa-S.jpg';
 	import kingAfricaL from '$lib/assets/stories/king-on-africa-L.jpg';
-	import responsive from '$lib/assets/features/desktop/responsive.svg';
-	import noLimit from '$lib/assets/features/desktop/no-limit.svg';
-	import embed from '$lib/assets/features/desktop/embed.svg';
 </script>
 
 <nav>
