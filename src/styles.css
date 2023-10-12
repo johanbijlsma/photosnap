@@ -61,6 +61,14 @@ nav {
 			&:hover {
 				color: var(--light-grey);
 			}
+			&:focus-within {
+				filter: drop-shadow(0 0 4px #bc7198);
+				outline: none;
+			}
+			&:focus {
+				filter: drop-shadow(0 0 4px #bc7198);
+				outline: none;
+			}
 			&.current {
 				background-image: var(--accent);
 				color: var(--pure-white);
@@ -111,6 +119,12 @@ nav {
 			font-weight: 700;
 			line-height: normal;
 			letter-spacing: 2px;
+
+			&:focus {
+				filter: drop-shadow(0 0 4px #bc7198);
+				outline: none;
+				text-decoration: underline;
+			}
 		}
 	}
 	& .card.createbg {
@@ -124,6 +138,48 @@ nav {
 .select-plan {
 	& .select-plan--inner {
 		padding-inline: 28px;
+		margin-block-start: 48px;
+		& .timeperiod-toggle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-block-end: 48px;
+			& button {
+				appearance: none;
+				/* display: contents; */
+				margin-inline: 32px;
+				background-color: transparent;
+				border: none;
+				&:hover {
+					cursor: pointer;
+				}
+				&:focus-within {
+					filter: drop-shadow(0 0 4px #bc7198);
+					outline: none;
+				}
+			}
+			& img:not(.selected) {
+				display: none;
+			}
+			& input#period-yearly {
+				appearance: none;
+			}
+			& input#period-monthly {
+				appearance: none;
+			}
+			& label {
+				opacity: 0.6;
+				color: #000;
+				text-align: center;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 25px; /* 138.889% */
+				&.selected {
+					opacity: 1;
+				}
+			}
+		}
 	}
 	& .select-card-wrapper {
 		display: flex;
@@ -146,7 +202,7 @@ nav {
 			padding-block-end: 8px;
 			font-size: 24px;
 		}
-		& p {
+		& p.card-content {
 			opacity: 0.6;
 		}
 		& p.card-extra-context {
@@ -174,10 +230,55 @@ nav {
 			padding-block: 12px;
 			margin-block: 40px 0px;
 		}
+		& p.select-card-prize {
+			/* opacity: 0.6; */
+			& span.prize {
+				display: block;
+				opacity: 1;
+				text-align: center;
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 48px; /* 120% */
+				letter-spacing: 4.167px;
+				text-transform: uppercase;
+			}
+		}
 	}
 	& .select-card.pro {
 		background-color: var(--pure-black);
 		color: var(--pure-white);
+		& .select-card-prize {
+			& span.prize {
+				display: block;
+				opacity: 1;
+				text-align: center;
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 48px; /* 120% */
+				letter-spacing: 4.167px;
+				text-transform: uppercase;
+			}
+			& span.prize-period {
+				display: block;
+				opacity: 0.6;
+				text-align: center;
+				font-family: DM Sans;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 25px; /* 166.667% */
+			}
+		}
+		&::before {
+			content: '';
+			height: 10px;
+			width: calc(100% + 72px);
+			background-image: var(--accent);
+			display: block;
+			translate: -36px -48px;
+		}
 		& button {
 			color: var(--pure-black);
 			background-color: var(--light-grey);
@@ -443,6 +544,34 @@ a {
 	.photo-wrapper .photo-card img {
 		width: 100vw;
 	}
+	.select-card-wrapper {
+		& p.card-content {
+			opacity: 0.6;
+		}
+		& .select-card-prize {
+			& span.prize {
+				display: block;
+				opacity: 1;
+				text-align: center;
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 48px; /* 120% */
+				letter-spacing: 4.167px;
+				text-transform: uppercase;
+			}
+			& span.prize-period {
+				display: block;
+				opacity: 0.6;
+				text-align: center;
+				font-family: DM Sans;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 25px; /* 166.667% */
+			}
+		}
+	}
 	body {
 		max-width: var(--max-phone-width);
 	}
@@ -562,6 +691,66 @@ a {
 		/* width: 100%; */
 		padding-inline: 0px 0px;
 		object-fit: cover;
+	}
+	.select-card-wrapper {
+		& .select-card {
+			display: grid;
+			grid-template-areas:
+				'title prize'
+				'planinfo prize'
+				'button .';
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto 1fr auto;
+			text-align: inherit;
+			padding-block: 40px;
+			column-gap: 50px;
+			& h3 {
+				grid-area: title;
+				padding-block-start: 0px;
+				padding-block-end: 18px;
+				margin-block: 0px;
+			}
+		}
+		& p.card-content {
+			opacity: 0.6;
+			grid-area: planinfo;
+		}
+		& .select-card-prize {
+			grid-area: prize;
+			margin-block: 0px;
+			& span.prize {
+				display: block;
+				opacity: 1;
+				text-align: right !important;
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 48px; /* 120% */
+				letter-spacing: 4.167px;
+				text-transform: uppercase;
+			}
+			& span.prize-period {
+				display: block;
+				opacity: 0.6;
+				text-align: right;
+				font-family: DM Sans;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 25px; /* 166.667% */
+			}
+			& button {
+				grid-area: button;
+			}
+		}
+		& .select-card.pro::before {
+			content: '';
+			width: 10px;
+			min-height: calc(100% * 3.8);
+			background-image: var(--accent);
+			display: block;
+			translate: -36px -188px;
+		}
 	}
 	.banner {
 		background-image: url('./lib/assets/shared/bg-beta-M.jpg');
@@ -727,6 +916,10 @@ a {
 		& .select-plan--inner {
 			padding-inline: 28px;
 		}
+		& .timeperiod-toggle {
+			display: flex;
+			justify-content: center;
+		}
 		& .select-card-wrapper {
 			display: grid;
 			grid-template-areas: 'basic pro business';
@@ -749,13 +942,31 @@ a {
 				padding-block-end: 8px;
 				font-size: 24px;
 			}
-			& p {
+			& p.card-content {
 				opacity: 0.6;
 			}
-			& p.card-extra-context {
-				text-transform: uppercase;
-				translate: 0 46px;
-				opacity: 1;
+			& .select-card-prize {
+				& span.prize {
+					display: block;
+					opacity: 1;
+					text-align: center;
+					font-size: 40px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 48px; /* 120% */
+					letter-spacing: 4.167px;
+					text-transform: uppercase;
+				}
+				& span.prize-period {
+					display: block;
+					opacity: 0.6;
+					text-align: center;
+					font-family: DM Sans;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 25px; /* 166.667% */
+				}
 			}
 			& img {
 				translate: -33px;
@@ -781,6 +992,16 @@ a {
 		& .select-card.pro {
 			background-color: var(--pure-black);
 			color: var(--pure-white);
+			padding-block: 96px;
+			&::before {
+				content: '';
+				height: 10px;
+				min-height: inherit;
+				width: calc(100% + 72px);
+				background-image: var(--accent);
+				display: block;
+				translate: -36px -48px;
+			}
 			& button {
 				color: var(--pure-black);
 				background-color: var(--light-grey);

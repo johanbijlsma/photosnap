@@ -29,7 +29,7 @@
 	import pinterest from '$lib/assets/shared/desktop/pinterest-darkbg.svg';
 </script>
 
-<nav>
+<nav data-sveltekit-preload-data>
 	<ul>
 		<li>
 			<a href="/">

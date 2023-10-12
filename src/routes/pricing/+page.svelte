@@ -10,6 +10,19 @@
 	import heroM from '$lib/assets/pricing/hero-M.jpg';
 	import heroL from '$lib/assets/pricing/hero-L.jpg';
 	import check from '$lib/assets/pricing/check.svg';
+	import slider from '$lib/assets/pricing/slider.svg';
+	import sliderActive from '$lib/assets/pricing/slider-active.svg';
+
+	let periodOptions = ['monthly', 'yearly'];
+	let selectedPeriod = 'monthly';
+
+	const changeOption = () => {
+		if (selectedPeriod === 'monthly') {
+			selectedPeriod = 'yearly';
+		} else {
+			selectedPeriod = 'monthly';
+		}
+	};
 </script>
 
 <nav>
@@ -45,32 +58,98 @@
 	</div>
 	<div class="select-plan">
 		<div class="select-plan--inner">
-			<div class="timeperiod-toggle">Montly / Yearly</div>
+			<div class="timeperiod-toggle">
+				<label for="period-monthly" class:selected={selectedPeriod === 'monthly'}
+					>{periodOptions[0]}</label
+				>
+				<button on:click={changeOption}>
+					<img
+						src={slider}
+						alt="toggle pricing per month"
+						class:selected={selectedPeriod === 'monthly'}
+					/>
+					<img
+						src={sliderActive}
+						alt="toggle pricing per year"
+						class:selected={selectedPeriod === 'yearly'}
+					/>
+				</button>
+
+				<input
+					type="radio"
+					bind:group={selectedPeriod}
+					name="period"
+					id="period-monthly"
+					checked
+					value={periodOptions[0]}
+				/>
+				<input
+					type="radio"
+					bind:group={selectedPeriod}
+					name="period"
+					id="period-yearly"
+					value={periodOptions[1]}
+				/>
+				<label for="period-yearly" class:selected={selectedPeriod === 'yearly'}
+					>{periodOptions[1]}</label
+				>
+			</div>
 			<div class="select-card-wrapper">
 				<div class="select-card basic">
 					<h3>Basic</h3>
-					<p>
+					<p class="card-content">
 						Includes basic usage of our platform. Recommended for new and aspiring photographers.
 					</p>
-					$19.00 per month $190.00 per year
+					{#if selectedPeriod === 'monthly'}
+						<p class="select-card-prize monthly">
+							<span class="prize">$19.00</span>
+							<span class="prize-period">per month</span>
+						</p>
+					{:else}
+						<p class="select-card-prize yearly">
+							<span class="prize">$190.00</span>
+							<span class="prize-period"> per year </span>
+						</p>
+					{/if}
 					<button>Pick Plan</button>
 				</div>
 				<div class="select-card pro">
 					<h3>Pro</h3>
-					<p>
+					<p class="card-content">
 						More advanced features available. Recommended for photography veterans and
 						professionals.
 					</p>
-					$39.00 per month $390.00 per year
+					{#if selectedPeriod === 'monthly'}
+						<p class="select-card-prize monthly">
+							<span class="prize">$39.00</span>
+							<span class="prize-period">per month</span>
+						</p>
+					{:else}
+						<p class="select-card-prize yearly">
+							<span class="prize">$390.00</span>
+							<span class="prize-period"> per year </span>
+						</p>
+					{/if}
+
 					<button>Pick Plan</button>
 				</div>
 				<div class="select-card business">
 					<h3>Business</h3>
-					<p>
+					<p class="card-content">
 						Additional features available such as more detailed metrics. Recommended for business
 						owners.
 					</p>
-					$99.00 per month $990.00 per year
+					{#if selectedPeriod === 'monthly'}
+						<p class="select-card-prize monthly">
+							<span class="prize">$99.00</span>
+							<span class="prize-period">per month</span>
+						</p>
+					{:else}
+						<p class="select-card-prize yearly">
+							<span class="prize">$990.00</span>
+							<span class="prize-period"> per year </span>
+						</p>
+					{/if}
 					<button>Pick Plan</button>
 				</div>
 			</div>
