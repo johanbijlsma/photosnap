@@ -102,13 +102,13 @@
 					</p>
 					{#if selectedPeriod === 'monthly'}
 						<p class="select-card-prize monthly">
-							<span class="prize">$19.00</span>
+							<span class="prize textalign-right">$19.00</span>
 							<span class="prize-period">per month</span>
 						</p>
 					{:else}
 						<p class="select-card-prize yearly">
-							<span class="prize">$190.00</span>
-							<span class="prize-period"> per year </span>
+							<span class="prize textalign-right">$190.00</span>
+							<span class="prize-period textalign-right"> per year </span>
 						</p>
 					{/if}
 					<button>Pick Plan</button>
@@ -121,13 +121,13 @@
 					</p>
 					{#if selectedPeriod === 'monthly'}
 						<p class="select-card-prize monthly">
-							<span class="prize">$39.00</span>
-							<span class="prize-period">per month</span>
+							<span class="prize textalign-right">$39.00</span>
+							<span class="prize-period textalign-right">per month</span>
 						</p>
 					{:else}
 						<p class="select-card-prize yearly">
-							<span class="prize">$390.00</span>
-							<span class="prize-period"> per year </span>
+							<span class="prize textalign-right">$390.00</span>
+							<span class="prize-period textalign-right"> per year </span>
 						</p>
 					{/if}
 
@@ -141,12 +141,12 @@
 					</p>
 					{#if selectedPeriod === 'monthly'}
 						<p class="select-card-prize monthly">
-							<span class="prize">$99.00</span>
+							<span class="prize textalign-right">$99.00</span>
 							<span class="prize-period">per month</span>
 						</p>
 					{:else}
 						<p class="select-card-prize yearly">
-							<span class="prize">$990.00</span>
+							<span class="prize textalign-right">$990.00</span>
 							<span class="prize-period"> per year </span>
 						</p>
 					{/if}
@@ -159,7 +159,7 @@
 		<h2>The features</h2>
 		<ul>
 			<li>Unlimited Story Posting</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -180,7 +180,7 @@
 				</li>
 			</ul>
 			<li>Unlimited Photo Upload</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -201,7 +201,7 @@
 				</li>
 			</ul>
 			<li>Embedding Custom Content</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -222,7 +222,7 @@
 				</li>
 			</ul>
 			<li>Customize Metadata</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -243,7 +243,7 @@
 				</li>
 			</ul>
 			<li>Advanced Metrics</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -264,7 +264,7 @@
 				</li>
 			</ul>
 			<li>Photo Downloads</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -285,7 +285,7 @@
 				</li>
 			</ul>
 			<li>Search Engine Indexing</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -306,7 +306,7 @@
 				</li>
 			</ul>
 			<li>Custom Analytics</li>
-			<ul>
+			<ul class="inner-list">
 				<li>
 					<div class="feature-plan">
 						<span>Basic</span>
@@ -342,49 +342,49 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Unlimited Story Posting</td>
+					<td class="row-title">Unlimited Story Posting</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td>Unlimited Photo Upload</td>
+					<td class="row-title">Unlimited Photo Upload</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td>Embedding Custom Content</td>
+					<td class="row-title">Embedding Custom Content</td>
 					<td>&nbsp;</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td>Customize Metadata</td>
+					<td class="row-title">Customize Metadata</td>
 					<td>&nbsp;</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td>Advanced Metrics</td>
+					<td class="row-title">Advanced Metrics</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td>Photo Downloads</td>
+					<td class="row-title">Photo Downloads</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td>Search Engine Indexing</td>
+					<td class="row-title">Search Engine Indexing</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
 				</tr>
 				<tr>
-					<td> Custom Analytics </td>
+					<td class="row-title">Custom Analytics </td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td><img src={check} alt="feature included in plan" loading="lazy" /></td>
